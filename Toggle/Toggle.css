@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --Secondary-600: #009FD4;
+    --Neutral-100: #FFFFFF;
+    --Neutral-400: #DBE2F0;
+    --Neutral-800: #252B37;
+    --Success-400: #00AF3D;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/*Label*/
+.label-left,
+.label-right {
+    color: var(--Neutral-800);
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 1%;
+}
+
+/*Toggle active*/
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+}
+
+.toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Neutral-400);
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--Neutral-100);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle:checked+.toggle-slider {
+    background-color: var(--Success-400);
+}
+
+.toggle:checked+.toggle-slider:before {
+    transform: translateX(20px);
+}
+
+/*Toggle focused*/
+.toggle-checkbox:focus+.toggle-label {
+    box-shadow: (0px 0px 4px rgba(0, 102, 255, 0.80));
+    border-radius: 50%;
+}
+
+/*Toggle disabled*/
+.toggle:disabled+.toggle-slider {
+    background-color: var(--Neutral-400);
+    cursor: not-allowed;
+}

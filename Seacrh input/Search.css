@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Primary-500: #0066FF;
+
+  --Neutral-100: #FFFFFF;
+  --Neutral-400: #DBE2F0;
+  --Neutral-500: #95A2BD;
+  --Neutral-600: #616C84;
+  --Neutral-800: #252B37;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-label {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  font-family: var(--font-family);
+  color: var(--Neutral-400);
+  transition: color 0.3s;
+}
+
+.search-container:focus-within .search-label {
+  color: var(--Neutral-400);
+}
+
+.material-icons {
+  color: var(--Neutral-500);
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid var(--Neutral-400);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: var(--font-family);
+  color: var(--Neutral-800);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--Primary-500);
+  font-family: 'Open Sans';
+  color: var(--Neutral-800);
+  box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+}
+
+.search-input::placeholder {
+  color: var(--Neutral-500);
+}
+
+.clear-button {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--Neutral-600);
+  outline: none;
+}
+
+.search-input:focus+.clear-button,
+.search-input:not(:empty)+.clear-button {
+  display: block;
+}

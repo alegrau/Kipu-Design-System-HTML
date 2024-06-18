@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="Modal.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <button class="btn open-modal-btn">
+    Abrir Modal
+  </button>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+
+      <button class=" close-modal-btn close"><i class="material-icons close-icon">close</i></button>
+      <div class="modal-info">
+        <i class="material-icons icon">info</i>
+        <h2>Título del Modal</h2>
+        <p>Este es el contenido del modal. Puedes agregar cualquier texto o contenido aquí.</p>
+
+      </div>
+      <div class="modal-btns">
+        <button class=" btn modal-btn cancel-btn close">Cerrar</button>
+        <button class=" btn modal-btn close">Aceptar</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script src="Modal.js"></script>
+</body>
+
+</html>

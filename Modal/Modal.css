@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Primary-100: #F5F9FF;
+  --Primary-500: #0066FF;
+  --Primary-600: #0058DB;
+  --Primary-700: #0041A3;
+
+  --Neutral-100: #FFFFFF;
+  --Neutral-500: #95A2BD;
+  --Neutral-800: #252B37;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Button*/
+.open-modal-btn,
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+
+  color: var(--Neutral-100, );
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 1%;
+  height: 48px;
+
+  border-radius: 8px;
+  background-color: var(--Primary-600);
+  border: none;
+}
+
+.open-modal-btn:hover,
+.btn:hover {
+  background-color: var(--Primary-700);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 43, 55, 0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 24px;
+  max-width: 500px;
+  position: relative;
+  border-radius: 12px;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.material-icons {
+  font-size: 56px;
+  color: var(--Primary-500);
+  text-align: center;
+}
+
+.material-icons.icon {
+  font-size: 56px;
+}
+
+.modal-content h2 {
+  font-size: 27px;
+  color: var(--Primary-500);
+  text-align: center;
+  margin: 0;
+}
+
+.modal-content p {
+  color: var(--Neutral-800);
+  text-align: center;
+  margin: 0;
+}
+
+
+.modal.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.modal-btn {
+  width: 180px;
+}
+
+.modal-btn.cancel-btn {
+  border: 1px solid var(--Primary-500);
+  background-color: white;
+  color: var(--Primary-500);
+}
+
+.modal-btn.cancel-btn:hover {
+  background-color: var(--Primary-100);
+}
+
+
+.close-modal-btn {
+  background-color: transparent;
+  color: var(--Neutral-500);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  font-size: 16px;
+}
+
+.close-icon {
+  color: var(--Neutral-400);
+  font-size: 16px;
+}

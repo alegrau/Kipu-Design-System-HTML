@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Primary-100: #F5F9FF;
+  --Primary-300: #8FBCFF;
+  --Primary-500: #0066FF;
+
+  --Neutral-100: #FFFFFF;
+  --Neutral-300: #EFF3FA;
+  --Neutral-400: #DBE2F0;
+  --Neutral-500: #95A2BD;
+  --Neutral-600: #616C84;
+  --Neutral-800: #252B37;
+
+  --Error-300: #E56671;
+  --Error-500: #CB0717;
+  --Error-600: #8A121C;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 50%;
+  font-family: 'Open Sans', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/*Upload box*/
+.upload-box {
+  display: flex;
+  padding: auto;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+
+  border-radius: 12px;
+  border: 1px dashed var(--Neutral-Neutral-400, #DBE2F0);
+  background: var(--Neutral-Neutral-100, #FFF);
+
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  border-color: var(--Neutral-500);
+}
+
+.upload-box:focus {
+  outline: none;
+  border-color: var(--Primary-500);
+  font-family: 'Open Sans';
+  color: var(--Neutral-800);
+  box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+}
+
+.upload-box:active {
+  border-color: var(--Primary-500);
+  color: var(--Neutral-800);
+}
+
+.upload-box:disabled {
+  color: var(--Neutral-500);
+  background-color: var(--Neutral-400);
+}
+
+.upload-box.error {
+  border-color: var(--Error-500);
+  box-shadow: 0 0 5px var(--Error-300);
+}
+
+.dragover {
+  background-color: var(--Primary-100);
+  border-style: solid;
+}
+
+/*ïnfo*/
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.info.material-icons.icon {
+  font-size: 80px;
+  color: var(--Neutral-500)
+}
+
+.info span {
+  font-size: 14px;
+  color: var(--Neutral-500);
+  word-wrap: break-word;
+}
+
+
+/*Button*/
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+  flex-shrink: 0;
+
+  color: var(--Neutral-100, );
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1%;
+
+  border-radius: 8px;
+  background: var(--Primary-500);
+  border: none;
+}
+
+
+.button-sm {
+  height: 36px;
+  min-width: 110px;
+  font-size: 14px;
+}
+
+/*Text*/
+label,
+input,
+p,
+input::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1%;
+  color: var(--Neutral-800);
+}
+
+label {
+  color: var(--Neutral-800);
+  font-size: 14px;
+}
+
+.help-text {
+  color: var(--Neutral-800);
+  font-size: 11px;
+}
+
+
+/**File status*/
+.uploaded,
+.uploading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+
+
+  border-radius: 12px;
+  border: 1px solid var(--Neutral-400, #DBE2F0);
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.file-name {
+  color: var(--Neutral-800);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.14px;
+  flex: 1;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  color: var(--Neutral-500);
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 10px */
+  letter-spacing: 0.2px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.btn-close {
+  background-color: transparent;
+}
+
+.btn-close i:hover {
+  color: var(--Error-600);
+}
+
+.uploaded .close,
+.uploading .close {
+  color: var(--Error-500);
+}
+
+.progress-status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--Neutral-300);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.progress {
+  width: 10%;
+  height: 100%;
+  background-color: var(--Primary-500);
+  border-radius: 10px;
+}
+
+.progress-label {
+  color: var(--Neutral-800);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.28px;
+}

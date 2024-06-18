@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Primary-100: #F5F9FF;
+  --Primary-500: #0066FF;
+  --Primary-700: #0041A3;
+
+  --Neutral-100: #FFFFFF;
+
+}
+
+body {
+  box-sizing: content-box;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Neutral-100);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  padding: 0px 24px;
+  height: 88px;
+
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu .material-icons {
+  color: var(--Primary-500);
+}
+
+img {
+  height: 48px;
+}
+
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--Primary-500);
+  font-family: 'Open Sans';
+}
+
+.initials {
+  color: var(--Neutral-100);
+  font-weight: bold;
+  text-align: center;
+}
+
+.avatar-name-lg {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}

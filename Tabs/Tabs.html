@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="Tabs.css">
+</head>
+
+<body>
+  <div class="tab-bar">
+    <div class="tab selected" onclick="showTabContent(0)">Label tab</div>
+    <div class="tab default" onclick="showTabContent(1)">Label tab</div>
+    <div class="tab disabled">Label tab</div>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-panel active">Contenido del Tab 1</div>
+    <div class="tab-panel">Contenido del Tab 2</div>
+  </div>
+</body>
+
+<script src="Tabs.js"></script>
+
+</html>

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --Primary-500: #0066FF;
+    --Primary-600: #0058DB;
+    --Neutral-100: #FFFFFF;
+}
+
+button {
+    color: var(--Neutral-100, );
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 1%;
+
+    border-radius: 50%;
+    background: var(--Primary-500);
+    border: none;
+}
+
+.button-lg {
+    height: 56px;
+    width: 56px;
+}
+
+.button-md {
+    height: 48px;
+    width: 48px;
+}
+
+.button-sm {
+    height: 36px;
+    width: 36px;
+}
+
+button:hover {
+    background: var(--Primary-600);
+}

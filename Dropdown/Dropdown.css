@@ -1,0 +1,141 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+ :root {
+   --Primary-100: #F5F9FF;
+   --Primary-300: #8FBCFF;
+   --Primary-500: #0066FF;
+
+   --Neutral-100: #FFFFFF;
+   --Neutral-300: #EFF3FA;
+   --Neutral-400: #DBE2F0;
+   --Neutral-500: #95A2BD;
+   --Neutral-600: #616C84;
+   --Neutral-800: #252B37;
+
+   --Error-300: #E56671;
+   --Error-500: #CB0717;
+
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ body {
+   display: flex;
+   flex-direction: column;
+   gap: var(--Error-300);
+
+   font-family: 'Open Sans', sans-serif;
+ }
+
+
+ /*container*/
+ .dropdown {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+ }
+
+ .subcontainer {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+
+   position: relative;
+ }
+
+ .select {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+
+   height: 48px;
+   padding: 0px 12px;
+
+   border-radius: 8px;
+   border: 1px solid var(--Neutral-400);
+
+   font-family: 'Open Sans';
+   color: var(--Neutral-800);
+
+   transition: border-color 0.5s ease-in-out;
+ }
+
+ .select:hover {
+   border-color: var(--Primary-500);
+ }
+
+ .selec:focus {
+   outline: none;
+   border-color: var(--Primary-500);
+   box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+   color: var(--Neutral-800);
+ }
+
+ .select:disabled,
+ p:disabled,
+ span:disabled {
+   cursor: not-allowed;
+   color: var(--Neutral-500);
+   background-color: var(--Neutral-400);
+ }
+
+ .invalid {
+   border-color: var(--Error-500) !important;
+ }
+
+ .invalid~.help-text {
+   color: var(--Error-500);
+ }
+
+ /*text*/
+ label,
+ span,
+ li {
+   font-family: 'Open Sans';
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 100%;
+   letter-spacing: 1%;
+   color: var(--Neutral-800);
+ }
+
+ span {
+   color: var(--Neutral-800);
+ }
+
+ label {
+   color: var(--Neutral-800);
+   font-size: 14px;
+ }
+
+ .help-text {
+   color: var(--Neutral-800);
+   font-size: 11px;
+   margin-top: -4px;
+ }
+
+ /*List*/
+ .list {
+   display: none;
+   position: absolute;
+   top: calc(100% + 1px);
+   background-color: var(--Neutral-100);
+   border: 1px solid var(--Neutral-400);
+   border-radius: 5px;
+   padding: 0;
+   margin-top: 5px;
+   list-style-type: none;
+   width: 100%;
+ }
+
+ .list li {
+   padding: 16px 12px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+
+ .list li:hover {
+   background-color: var(--Primary-100);
+ }

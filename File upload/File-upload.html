@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <link rel="stylesheet" href="File-upload.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!-- upload-box -->
+  <div class="container">
+    <label for="">Label</label>
+    <div class="subcontainer" id="upload-container">
+      <div class="upload-box" id="upload-box">
+        <div class="info">
+          <i class="material-icons icon">image</i>
+          <span>Arrastra tu imagen o da click aquí para buscarla</span>
+          <span>Solo PNG, JPG (máx 2MB)</span>
+        </div>
+        <button class="button button-sm" onclick="document.getElementById('file-input').click();">
+          <i class="material-icons icon ">search</i>
+          Search
+
+        </button>
+      </div>
+      <span class="help-text">Help text</span>
+    </div>
+  </div>
+  <input type="file" id="file-input" style="display: none;" onchange="handleFiles(this.files)" multiple>
+
+
+  <!-- item uploaded -->
+  <div class="uploaded">
+    <div class="status">
+      <i class="material-icons icon file">description</i>
+      <div class="file">
+        <span class="file-name">File name</span>
+        <span class="file-size">2MB</span>
+      </div>
+    </div>
+    <button class="btn-close"><i class="material-icons icon close">close</i></button>
+
+  </div>
+
+  <!-- item uploading -->
+  <div class="uploading">
+    <div class="status">
+      <i class="material-icons icon file">description</i>
+      <div class="progress-status">
+        <div class="file">
+          <span class="file-name">File name</span>
+          <span class="file-size">2MB</span>
+        </div>
+        <div class="bar">
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+
+          </div>
+          <div class="progress-label" id="progressLabel">0%</div>
+        </div>
+      </div>
+
+
+    </div>
+    <button class="btn-close"><i class="material-icons icon close">close</i></button>
+
+  </div>
+
+
+  <script src="File-upload.js">
+  </script>
+
+</body>
+
+</html>

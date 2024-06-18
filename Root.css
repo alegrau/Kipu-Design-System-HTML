@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.root {
+    /*Colour Primary*/
+    --Primary-100: #F5F9FF;
+    --Primary-200: #D1E3FF;
+    --Primary-300: #8FBCFF;
+    --Primary-400: #428EFF;
+    --Primary-500: #0066FF;
+    --Primary-600: #0058DB;
+    --Primary-700: #0041A3;
+    --Primary-800: #070D56;
+    --Primary-900: #05093D;
+
+    /*Colour Secondary*/
+    --Secondary-100: #DEF6FF;
+    --Secondary-200: #B6EFFF;
+    --Secondary-300: #75E5FF;
+    --Secondary-400: #2CD8FF;
+    --Secondary-500: #00C7FA;
+    --Secondary-600: #009FD4;
+    --Secondary-700: #007EAB;
+    --Secondary-800: #065874;
+    --Secondary-900: #04384D;
+
+    /*Colour Neutral*/
+    --Neutral-100: #FFFFFF;
+    --Neutral-200: #F6F9FF;
+    --Neutral-300: #EFF3FA;
+    --Neutral-400: #DBE2F0;
+    --Neutral-500: #95A2BD;
+    --Neutral-600: #616C84;
+    --Neutral-700: #3E495E;
+    --Neutral-800: #252B37;
+
+    /*Colour Success*/
+    --Success-100: #E6FFEE;
+    --Success-200: #B2FBCA;
+    --Success-300: #69E996;
+    --Success-400: #00AF3D;
+    --Success-500: #007A23;
+    --Success-600: #085E27;
+    --Success-700: #004217;
+
+    /*Colour Warning*/
+    --Warning-100: #FFFAEB;
+    --Warning-200: #FFF1C6;
+    --Warning-300: #FFE088;
+    --Warning-400: #FFB72A;
+    --Warning-500: #F99107;
+    --Warning-600: #DD6A02;
+    --Warning-700: #B74906;
+
+    /*Colour Error*/
+    --Error-100: #FFF1F2;
+    --Error-200: #FFC4C9;
+    --Error-300: #E56671;
+    --Error-400: #F01224;
+    --Error-500: #CB0717;
+    --Error-600: #8A121C;
+    --Error-700: #4B040A;
+
+    font-family: 'Open Sans';
+}

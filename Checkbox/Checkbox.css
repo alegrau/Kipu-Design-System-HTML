@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --Secondary-600: #009FD4;
+    --Neutral-300: #EFF3FA;
+    --Neutral-400: #DBE2F0;
+    --Neutral-500: #95A2BD;
+    --Neutral-800: #252B37;
+    --Error-100: #FFF1F2;
+    --Error-400: #F01224;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+
+    color: var(--Neutral-800);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.16px;
+}
+
+.checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Secondary-600);
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Material Icons';
+    font-size: 18px;
+    color: transparent;
+}
+
+.checkbox:checked+.checkbox-label::before {
+    background-color: var(--Secondary-600);
+    border-color: var(--Secondary-600);
+    color: #fff;
+}
+
+.checkbox:checked+.checkbox-label::before {
+    content: 'check';
+}
+
+
+.checkbox-label:hover::before {
+
+    box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+}
+
+.checkbox:focus+.checkbox-label::before {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.checkbox:disabled+.checkbox-label {
+    color: var(--Neutral-400);
+    cursor: not-allowed;
+}
+
+.checkbox:disabled+.checkbox-label::before {
+    background-color: var(--Neutral-300);
+    border-color: var(--Neutral-400);
+    color: var(--Neutral-400);
+    box-shadow: none;
+}
+
+.checkbox-container.error .checkbox-label::before {
+    border-color: var(--Error-400)
+}
+
+.checkbox-container.error .checkbox:checked+.checkbox-label::before {
+    background-color: var(--Error-100);
+    border-color: var(--Error-400);
+    color: var(--Error-400);
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Primary-100: #F5F9FF;
+  --Primary-300: #8FBCFF;
+  --Primary-500: #0066FF;
+
+  --Neutral-100: #FFFFFF;
+  --Neutral-300: #EFF3FA;
+  --Neutral-400: #DBE2F0;
+  --Neutral-500: #95A2BD;
+  --Neutral-600: #616C84;
+  --Neutral-800: #252B37;
+
+  --Error-300: #E56671;
+  --Error-500: #CB0717;
+  --Error-600: #8A121C;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.completed,
+.active,
+.inactive {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #0066FF;
+}
+
+span {
+  font-size: 14px;
+  color: var(--Neutral-800);
+  word-wrap: none;
+  word-break: none;
+
+}
+
+
+/*State*/
+.circle-completed {
+  background-color: var(--Primary-500);
+}
+
+.circle-active {
+  border-style: dashed;
+  stroke-width: 1px;
+  stroke: var(--Primary-Primary-500);
+}
+
+.circle-inactive {
+  border-color: var(--Neutral-400);
+}
+
+/*Progress bar*/
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--Neutral-300);
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  background-color: var(--Primary-500);
+  border-radius: 10px;
+}

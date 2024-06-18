@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --Neutral-100: #ffffff;
+  --Neutral-200: #F6F9FF;
+  --Neutral-300: #EFF3FA;
+  --Neutral-400: #DBE2F0;
+  --Neutral-500: #95A2BD;
+  --Neutral-800: #252B37;
+  --Primary-500: #0066FF;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.chip {
+  display: inline-flex;
+  height: 20px;
+  min-width: 80px;
+  padding: 7px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50px;
+  border: 1px solid var(--Primary-500);
+  background: var(--Neutral-100);
+}
+
+span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.14px;
+  color: var(--Primary-500);
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.material-icons.icon {
+  font-size: 18px;
+  color: var(--Primary-500);
+}
+
+.chip:hover {
+  background-color: #F5F9FF;
+}
+
+.chip:focus {
+  box-shadow: 0px 0px 4px 2px rgba(0, 159, 212, 0.20);
+}
+
+.chip:active,
+.chip.selected {
+  border-radius: 50px;
+  background-color: #0066FF;
+}
+
+.chip:active span,
+.chip.selected span,
+.chip:active .material-icons.icon,
+.chip.selected .material-icons.icon {
+  color: #ffffff;
+}
+
+.chip.disabled {
+  background-color: #e0e0e0;
+  border-color: #bdbdbd;
+  color: #9e9e9e;
+  border-radius: 50px;
+  border: 1px solid #DBE2F0;
+  background-color: #EFF3FA;
+  color: #95A2BD;
+  cursor: not-allowed;
+}
+
+.chip.disabled button {
+  cursor: not-allowed;
+}
