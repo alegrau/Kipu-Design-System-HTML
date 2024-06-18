@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.root {
-  /*Colour Primary*/
+:root {
   --Primary-100: #F5F9FF;
   --Primary-200: #D1E3FF;
   --Primary-300: #8FBCFF;
@@ -36,12 +35,6 @@ body {
 
 }
 
-.slider {
-  width: 100%;
-  border: none;
-}
-
-
 
 span {
   font-family: 'Open Sans', sans-serif;
@@ -54,4 +47,32 @@ label {
   font-family: 'Open Sans', sans-serif;
   color: var(--Neutral-800);
   font-size: 14px;
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .slider {
+    overflow: hidden;
+    width: 500px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--Neutral-400);
+    border-radius: 50px;
+    ;
+  }
+
+  .slider::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: var(--Primary-500);
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 20px;
+    -webkit-appearance: none;
+    height: 20px;
+    cursor: ew-resize;
+    background: var(--Primary-500);
+    box-shadow: -500px 0 0 500px var(--Primary-300);
+  }
 }
