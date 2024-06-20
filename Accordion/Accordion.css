@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.root {
+  --Primary-100: #F5F9FF;
+  --Neutral-400: #DBE2F0;
+  --Neutral-800: #252B37;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #252B37;
+}
+
+.accordion {
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid var(--Neutral-400);
+  background-color: white;
+  /*Optional*/
+  position: fixed;
+  top: 10%
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #F5F9FF;
+}
+
+.chevron {
+  transition: transform 0.5s;
+}
+
+.accordion-header.open .chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+  margin: 16px 0;
+}
+
+.accordion-header.open+.accordion-content {
+  padding: 16px;
+}
+
+p {
+  font-size: 16px;
+}
