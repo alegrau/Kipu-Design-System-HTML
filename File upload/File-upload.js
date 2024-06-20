@@ -85,7 +85,7 @@ function handleFiles(files) {
 
     fileListContainer.appendChild(item);
 
-    // Simulating file upload progress
+    // Simulating progress
     let progressValue = 0;
     const updateProgress = () => {
       progressValue += 1;
@@ -94,10 +94,10 @@ function handleFiles(files) {
       if (progressValue < 100) {
         setTimeout(updateProgress, 50);
       } else {
-        // Replace uploading item with uploaded item
+        // Replace uploading item 
         item.classList.replace('uploading', 'uploaded');
-        progressBar.style.display = 'none'; // Hide progress bar for uploaded item
-        closeButton.style.display = 'block'; // Show close button for uploaded item
+        progressBar.style.display = 'none'; 
+        closeButton.style.display = 'block'; 
       }
     };
     setTimeout(updateProgress, 50);

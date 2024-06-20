@@ -1,4 +1,3 @@
-// JavaScript to toggle dropdown
 const select = document.querySelector('.select');
 const list = document.querySelector('.list');
 

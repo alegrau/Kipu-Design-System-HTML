@@ -1,20 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --Primary-100: #F5F9FF;
-  --Primary-300: #8FBCFF;
   --Primary-500: #0066FF;
 
-  --Neutral-100: #FFFFFF;
   --Neutral-300: #EFF3FA;
   --Neutral-400: #DBE2F0;
   --Neutral-500: #95A2BD;
-  --Neutral-600: #616C84;
   --Neutral-800: #252B37;
-
-  --Error-300: #E56671;
-  --Error-500: #CB0717;
-  --Error-600: #8A121C;
 
   font-family: 'Open Sans', sans-serif;
 }
@@ -48,7 +40,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #0066FF;
+  border: 1px solid var(--Primary-500);
 }
 
 span {
@@ -68,7 +60,7 @@ span {
 .circle-active {
   border-style: dashed;
   stroke-width: 1px;
-  stroke: var(--Primary-Primary-500);
+  stroke: var(--Primary-500);
 }
 
 .circle-inactive {

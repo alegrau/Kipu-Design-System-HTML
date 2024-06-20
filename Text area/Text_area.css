@@ -103,18 +103,12 @@ label.error::placeholder {
     color: var(--Error-500);
 }
 
-
-
-
-
-
+/*Input*/
 input {
     border-radius: 8px;
     border: 1px solid var(--Neutral-400, );
     background: var(--Neutral-100);
 }
-
-
 
 input::placeholder {
     color: var(--Neutral-500);
